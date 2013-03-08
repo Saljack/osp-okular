@@ -20,7 +20,6 @@
 #include <QTextStream>
 #include "aboutdata.h"
 #include "shellutils.h"
-#include <KDebug>
 
 static bool attachUniqueInstance(KCmdLineArgs* args)
 {
