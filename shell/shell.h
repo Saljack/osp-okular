@@ -60,6 +60,7 @@ public slots:
   void slotQuit();
   
   Q_SCRIPTABLE Q_NOREPLY void tryRaise();
+  Q_SCRIPTABLE Q_NOREPLY void noRaise();
 
 protected:
   /**

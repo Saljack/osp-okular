@@ -125,7 +125,7 @@ void Shell::init()
     
     if (m_args && !m_args->isSet("raise"))
     {
-        setAttribute(Qt::WA_ShowWithoutActivating);
+        noRaise();
     }
     
     QDBusConnection::sessionBus().registerObject("/okularshell", this, QDBusConnection::ExportScriptableSlots);
@@ -347,6 +347,11 @@ void Shell::tryRaise()
     {
         KWindowSystem::forceActiveWindow( window()->effectiveWinId() );
     }
+}
+
+void Shell::noRaise()
+{
+    setAttribute(Qt::WA_ShowWithoutActivating);
 }
 
 // only called when starting the program

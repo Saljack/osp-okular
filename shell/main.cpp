@@ -20,6 +20,7 @@
 #include <QTextStream>
 #include "aboutdata.h"
 #include "shellutils.h"
+#include <KDebug>
 
 static bool attachUniqueInstance(KCmdLineArgs* args)
 {
@@ -65,7 +66,7 @@ int main(int argc, char** argv)
     } else {
         // no session.. just start up normally
         KCmdLineArgs* args = KCmdLineArgs::parsedArgs();
-
+	
         // try to attach the "unique" session: if we succeed, do nothing more and exit
         if (attachUniqueInstance(args))
         {
